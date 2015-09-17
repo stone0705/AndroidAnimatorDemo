@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -55,6 +56,14 @@ public class listenerTestActivity extends Activity {
             @Override
             public void onClick(View v) {
                 onFinishAnim(listen);
+            }
+        });
+        listen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(listenerTestActivity.this,FloatActionButtonActivity.class);
+                startActivity(intent);
             }
         });
     }

@@ -28,6 +28,10 @@
             android:name=".AnimationSetActivity"
             android:label="@string/title_activity_animation_set" >
         </activity>
+        <activity
+            android:name=".FloatActionButtonActivity"
+            android:label="@string/title_activity_float_action_button" >
+        </activity>
     </application>
 
 </manifest>

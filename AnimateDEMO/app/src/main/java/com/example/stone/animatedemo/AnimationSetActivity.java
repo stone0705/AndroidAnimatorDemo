@@ -54,6 +54,12 @@ public class AnimationSetActivity extends Activity {
                 togetherSet(listen,X,Y);
             }
         });
+        onFinish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                nottogether(listen,X,Y);
+            }
+        });
     }
     void togetherSet(View view,float originX,float originY){
         view.setElevation(100);
@@ -78,6 +84,37 @@ public class AnimationSetActivity extends Activity {
         set.setDuration(500);
         set.playTogether(anim6,anim7,anim8,anim9,anim10);
         set.play(anim6).after(anim5);
+        set.start();
+    }
+
+    void nottogether(View view,float originX,float originY){
+        view.setElevation(100);
+        view.setTranslationY(originY);
+        view.setTranslationX(originX - 120);
+        view.setScaleX(1.3f);
+        view.setScaleY(1.3f);
+        view.setVisibility(View.VISIBLE);
+        AnimatorSet set = new AnimatorSet();
+        ObjectAnimator anim1 = ObjectAnimator.ofFloat(view, "Elevation", 100, 0);
+        ObjectAnimator anim2 = ObjectAnimator.ofFloat(view, "TranslationY", originY, originY + 190);
+        ObjectAnimator anim3 = ObjectAnimator.ofFloat(view,"TranslationX",originX-120,originX);
+        ObjectAnimator anim4 = ObjectAnimator.ofFloat(view,"ScaleX",1.3f,1.0f);
+        ObjectAnimator anim5 = ObjectAnimator.ofFloat(view,"ScaleY",1.3f,1.0f);
+        ObjectAnimator anim6 = ObjectAnimator.ofFloat(view,"Elevation",0,30,0,18,0,12,0,5,0);
+        ObjectAnimator anim7 = ObjectAnimator.ofFloat(view, "ScaleX", 1.0f, 1.1f, 1.0f, 1.08f, 1.0f, 1.04f, 1.0f,1.01f,1.0f);
+        ObjectAnimator anim8 = ObjectAnimator.ofFloat(view, "ScaleY", 1.0f, 1.1f, 1.0f, 1.08f, 1.0f, 1.04f, 1.0f,1.01f,1.0f);
+        ObjectAnimator anim9 = ObjectAnimator.ofFloat(view, "TranslationY", originY + 190,originY +165,originY + 190,originY+172,originY + 190,originY+182,originY+190,originY+188,originY+190);
+        ObjectAnimator anim10 = ObjectAnimator.ofFloat(view,"TranslationX", originX,originX-25,originX,originX-18,originX,originX-12,originX,originX-5,originX,originX-2,originX);
+        set.play(anim1);
+        set.play(anim2).after(anim1);
+        set.play(anim3).after(anim2);
+        set.play(anim4).after(anim3);
+        set.play(anim5).after(anim4);
+        set.play(anim6).after(anim5);
+        set.play(anim7).after(anim6);
+        set.play(anim8).after(anim7);
+        set.play(anim9).after(anim8);
+        set.play(anim10).after(anim9);
         set.start();
     }
 }

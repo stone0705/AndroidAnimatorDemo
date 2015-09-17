@@ -6,4 +6,5 @@
     <string name="title_activity_interpolator">InterpolatorActivity</string>
     <string name="title_activity_listener_test">listenerTestActivity</string>
     <string name="title_activity_animation_set">AnimationSetActivity</string>
+    <string name="title_activity_float_action_button">FloatActionButtonActivity</string>
 </resources>
