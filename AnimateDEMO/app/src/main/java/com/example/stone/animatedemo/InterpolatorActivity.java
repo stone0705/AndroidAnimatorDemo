@@ -101,6 +101,14 @@ public class InterpolatorActivity extends Activity {
                 startActivity(intent);
             }
         });
+        target.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(InterpolatorActivity.this, xmlAnimateActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     void anim(final View view,float origin,TimeInterpolator interpolator){
         ValueAnimator anim = ValueAnimator.ofFloat(origin, origin + 500);

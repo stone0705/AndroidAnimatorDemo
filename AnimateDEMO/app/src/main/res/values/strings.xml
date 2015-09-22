@@ -7,4 +7,6 @@
     <string name="title_activity_listener_test">listenerTestActivity</string>
     <string name="title_activity_animation_set">AnimationSetActivity</string>
     <string name="title_activity_float_action_button">FloatActionButtonActivity</string>
+    <string name="title_activity_xml_animate">xmlAnimateActivity</string>
+    <string name="title_activity_layout_trans">LayoutTransActivity</string>
 </resources>

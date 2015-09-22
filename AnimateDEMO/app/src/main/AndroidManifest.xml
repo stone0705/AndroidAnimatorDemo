@@ -32,6 +32,14 @@
             android:name=".FloatActionButtonActivity"
             android:label="@string/title_activity_float_action_button" >
         </activity>
+        <activity
+            android:name=".xmlAnimateActivity"
+            android:label="@string/title_activity_xml_animate" >
+        </activity>
+        <activity
+            android:name=".LayoutTransActivity"
+            android:label="@string/title_activity_layout_trans" >
+        </activity>
     </application>
 
 </manifest>

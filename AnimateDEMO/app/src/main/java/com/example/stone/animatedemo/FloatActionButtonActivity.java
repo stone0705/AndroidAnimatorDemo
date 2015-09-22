@@ -71,7 +71,7 @@ public class FloatActionButtonActivity extends AppCompatActivity {
         ObjectAnimator anim2 = ObjectAnimator.ofFloat(view2,"TranslationX",X,(float)(X+(redius/Math.pow(2,0.5)))).setDuration(400);
         ObjectAnimator anim3 = ObjectAnimator.ofFloat(view2,"TranslationY",Y,(float)(Y+(redius/Math.pow(2,0.5)))).setDuration(400);
         ObjectAnimator anim4 = ObjectAnimator.ofFloat(view3,"TranslationY",Y,Y+redius).setDuration(600);
-        //anim1.setInterpolator(new DecelerateInterpolator());
+        //anim1.setInterpolator(new DecelerateInterpolator());  anim1使用效果不好
         anim2.setInterpolator(new DecelerateInterpolator());
         anim3.setInterpolator(new DecelerateInterpolator());
         anim4.setInterpolator(new DecelerateInterpolator());
@@ -83,11 +83,7 @@ public class FloatActionButtonActivity extends AppCompatActivity {
         ObjectAnimator anim9 = ObjectAnimator.ofFloat(view3,"ScaleX",1f,0.6f).setDuration(600);
         ObjectAnimator anim10 = ObjectAnimator.ofFloat(view3,"ScaleY",1f,0.6f).setDuration(600);
         AnimatorSet set = new AnimatorSet();
-        //set.play(anim1);
         set.playTogether(anim1, anim2, anim3, anim4,anim5,anim6,anim7,anim8,anim9,anim10);
-        //set.play(anim2).with(anim1).after(200);
-        //set.play(anim4).after(1050);
-        //set.setDuration(500);
         set.addListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationStart(Animator animation) {
@@ -117,11 +113,7 @@ public class FloatActionButtonActivity extends AppCompatActivity {
         ObjectAnimator anim9 = ObjectAnimator.ofFloat(view3,"ScaleX",0.6f,1f).setDuration(600);
         ObjectAnimator anim10 = ObjectAnimator.ofFloat(view3,"ScaleY",0.6f,1f).setDuration(600);
         AnimatorSet set = new AnimatorSet();
-        //set.play(anim1);
         set.playTogether(anim1, anim2, anim3, anim4,anim5,anim6,anim7,anim8,anim9,anim10);
-        //set.play(anim2).with(anim1).after(200);
-        //set.play(anim4).after(1050);
-        //set.setDuration(500);
         set.addListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {

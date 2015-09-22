@@ -110,15 +110,4 @@ public class MainActivity extends Activity {
     public void objectDrop(final View view,float origin){
         ObjectAnimator.ofFloat(view,"TranslationY",origin,origin+10,origin-10,origin+6,origin-6,origin+1,origin-1,origin).setDuration(1000).start();
     }
-
-    public void powerFunction(final View view,point pointa){
-        ValueAnimator anim = new ValueAnimator();
-        anim.setObjectValues(pointa);
-        anim.setEvaluator(new TypeEvaluator<point>() {
-            @Override
-            public point evaluate(float fraction, point startValue, point endValue) {
-                return null;
-            }
-        });
-    }
 }
